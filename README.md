@@ -61,4 +61,4 @@
     ```
 
 + deploy
-  + 
+  + `mvn clean deploy`
