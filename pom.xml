@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- TODO change to your own GAV -->
+	<groupId>com.example</groupId>
+	<artifactId>artifact</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<!-- TODO change to your own artifact name -->
+	<name>artifact</name>
+	<url>https://maven.apache.org</url>
+
+	<developers>
+		<developer>
+			<!-- TODO change to your own contact info -->
+			<email>mail@example.com</email>
+			<id>username</id>
+			<organization>Example Technology Co., Ltd.</organization>
+			<url>https://www.example.com</url>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Using jdk 1.8 -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<!-- add other properties below -->
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- add other dependencies below -->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<resources>
+			<!-- It's library, do not package resources -->
+			<resource>
+				<directory>src/main/java</directory>
+				<excludes>
+					<exclude>**/*.*</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+
+	<!-- TODO change to your own maven repo like nexus or jfrog -->
+	<distributionManagement>
+		<repository>
+			<id>repo-releases</id>
+			<name>Example Maven Repository</name>
+			<url>https://mvn.un-net.com/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>repo-snapshots</id>
+			<name>Example Maven Snapshots Repository</name>
+			<url>https://mvn.un-net.com/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
