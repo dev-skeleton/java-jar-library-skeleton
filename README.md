@@ -108,7 +108,7 @@
 
 ## Git commit format
 
-- `feat` Add new fetures
+- `feat` Add new features
 - `fix` bugfix
 - `style` code style, no logic change
 - `perf` performance/optimize
